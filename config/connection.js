@@ -3,7 +3,7 @@ var mysql = require("mysql");
 
 var connection;
 
-if(process.env.CLEARDB_DATABASE_URL){
+if(process.env.JAWSDB_URL){
     connection = mysql.createConnection({
         host: process.env.HOST,
         user: process.env.USERNAME,
@@ -15,7 +15,7 @@ if(process.env.CLEARDB_DATABASE_URL){
         port: 3306,
         host: "localhost",
         user: "root",
-        password: "chibalun83",
+        password: "password", //process.env.PASSWORD,
         database: "burgers_db"
     });
 };
